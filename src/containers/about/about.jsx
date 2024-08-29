@@ -1,6 +1,6 @@
 import React from "react";
 import { BsInfoCircleFill } from "react-icons/bs";
-import PageHeaderContent from "../../components/pageHeaderContent";
+import PageHeaderContent from "../../components/pageHeaderContent/pageheader";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
 import { FaDev, FaDatabase, FaApple, FaAndroid } from "react-icons/fa";

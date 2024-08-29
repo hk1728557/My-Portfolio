@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFiletypePdf } from "react-icons/bs";
-import PageHeaderContent from "../../components/pageHeaderContent";
+import PageHeaderContent from "../../components/pageHeaderContent/pageheader";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -15,8 +15,13 @@ const Resume = () => {
     <section id="resume" className="resume">
       <PageHeaderContent
         headerText="Resume"
-        
-        icon={<a href="Hardeep_Resum.pdf" download={"Hardeep_Resum.pdf"}><BsFiletypePdf size={40} /><br/>Download Now</a>}
+        icon={
+          <a href="Hardeep_Resum.pdf" download={"Hardeep_Resum.pdf"}>
+            <BsFiletypePdf size={40} />
+            <br />
+            Download Now
+          </a>
+        }
       />
       <div className="timeline">
         <div className="timeline_experience">

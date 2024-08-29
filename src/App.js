@@ -2,13 +2,13 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Home from "./containers/home";
-import About from "./containers/about";
-import Portfolio from "./containers/portfolio";
-import Contact from "./containers/contact";
-import Resume from "./containers/resume";
-import Skills from "./containers/skills";
-import Navbar from "./components/nevBar";
+import Home from "./containers/home/homepage";
+import About from "./containers/about/about";
+import Portfolio from "./containers/portfolio/portfolio";
+import Contact from "./containers/contact/contectus";
+import Resume from "./containers/resume/resume";
+import Skills from "./containers/skills/skills";
+import Navbar from "./components/nevBar/nevbar";
 import particles from "./utilsJs/particles";
 
 function App() {

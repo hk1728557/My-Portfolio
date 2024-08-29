@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdLabelImportant } from "react-icons/md";
-import PageHeaderContent from "../../components/pageHeaderContent";
+import PageHeaderContent from "../../components/pageHeaderContent/pageheader";
 import GitHub from "../../images/github.jpg";
 import ImageOne from "../../images/image1.jpg";
 import Dropdown from "../../images/dropdown.png";
