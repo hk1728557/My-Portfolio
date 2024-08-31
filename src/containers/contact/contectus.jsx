@@ -21,9 +21,12 @@ const Contact = () => {
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
+          alert("Email sent successfully!");
+          form.current.reset(); // Reset the form fields
         },
         (error) => {
           console.log("FAILED...", error.text);
+          alert("Failed to send email. Please try again.");
         }
       );
   };
