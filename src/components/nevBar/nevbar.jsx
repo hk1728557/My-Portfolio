@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBars} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import ProfileImg from "../../images/profileImg.jpg";
@@ -23,7 +23,6 @@ const data = [
     label: "RESUME",
     to: "/resume",
   },
-
   {
     label: "PORTFOLIO",
     to: "/portfolio",
@@ -35,36 +34,38 @@ const data = [
 ];
 
 const Navbar = () => {
-  //  set toggleIcon useState
+  // set toggleIcon useState
   const [toggleIcon, setToggleIcon] = React.useState(false);
 
   // create handleToggleIcon method
   const handleToggleIcon = () => {
-    setToggleIcon(!toggleIcon);
+    setToggleIcon((prev) => !prev);
   };
+
+  // Function to close the menu when a link is clicked
+  const closeMenu = () => {
+    setToggleIcon(false);
+  };
+
   return (
     <div>
       <nav className="navbar">
-        {/*  crete React logo */}
         <div className="navbar__container">
-          {/* <Link to={"/"} className="navbar__container_logo">
-            <FaReact size={30} />
-          </Link> */}
-
           <img
             className="navbar__container_profileImg"
-            alt="dummy data"
+            alt="Profile"
             src={ProfileImg}
           />
         </div>
 
-        {/*  crete pages menu list and map to data list */}
+        {/* Pages menu list */}
         <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
             <li key={key} className="navbar__container__menu__item">
               <Link
                 className="navbar__container__menu__item__link"
                 to={item.to}
+                onClick={closeMenu}
               >
                 {item.label}
               </Link>
@@ -72,7 +73,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/*create toggleIcon in mobile view  */}
+        {/* Toggle Icon for mobile view */}
         <div className="nav-icon" onClick={handleToggleIcon}>
           {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
         </div>
