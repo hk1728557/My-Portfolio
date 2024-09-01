@@ -12,32 +12,28 @@ import Navbar from "./components/nevBar/nevbar";
 import particles from "./utilsJs/particles";
 
 function App() {
-
   const location = useLocation();
   console.log(location);
   // create init method
   const handleInit = async (main) => {
     await loadFull(main);
   };
-  
-  const renderParticleJsInHomePage = location.pathname ==="/";
+
+  const renderParticleJsInHomePage = location.pathname === "/";
 
   return (
     <div className="App">
       {/* particles */}
       {/* front page use background tsparticles */}
-      {
-         renderParticleJsInHomePage &&
-         <Particles id="particles" init={handleInit} options={particles} />
-
-      }
-      
+      {renderParticleJsInHomePage && (
+        <Particles id="particles" init={handleInit} options={particles} />
+      )}
 
       {/* navbar */}
       <Navbar />
 
       {/* main page content */}
-      <Routes>
+      <Routes basename="/My-Portfolio">
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
