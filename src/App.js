@@ -34,7 +34,7 @@ function App() {
 
       {/* main page content */}
       <Routes basename="/My-Portfolio">
-        <Route index path="/" element={<Home />} />
+        <Route index path="/My-Portfolio" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
